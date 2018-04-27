@@ -1,6 +1,6 @@
 {
   "name": "@eliumhq/elium-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">=9",
     "npm": "^4.0.0"

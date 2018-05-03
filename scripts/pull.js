@@ -1,8 +1,17 @@
 const { exec } = require('child_process')
 
-module.exports = (commit = true) => {
+function ensureArray (arr) {
+	return Array.isArray(arr) ? arr : [arr]
+}
+
+module.exports = (languages, commit = true) => {
 	console.log('Pulling PO files...')
-	exec(`tx pull -a`, (error, stdout, stderr) => {
+	const langs = languages
+		? ensureArray(languages)
+			.map(l => `-l ${l}`)
+			.join(' ')
+		: '-a '
+	exec(`tx pull ${langs}`, (error, stdout, stderr) => {
 		if (error) {
 			console.error(error)
 			console.warn('Be sure to have the transifex-client : pip install transifex-cli')

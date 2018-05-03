@@ -40,12 +40,13 @@ program
 program
 	.command('pull')
 	.option('--no-commit', 'Do not commit PO files')
+	.option('-l, --language <language>', 'Language')
 	.action(options => {
 		if (!fs.existsSync('.tx/config')) {
 			logError('No transifex configuration found in this directory. Please ensure you have a .tx/config file.')
 			process.exit(1)
 		}
-		return pull(options.commit)
+		return pull(options.language, options.commit)
 	})
 
 program.command('push').action(() => push())

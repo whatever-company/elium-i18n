@@ -11,11 +11,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.com:elium/product/elium-i18n.git"
-  },
-  "author": "Whatever-Company",
+  "author": "Elium",
   "license": "UNLICENSED",
   "dependencies": {
     "babel-traverse": "^6.26.0",

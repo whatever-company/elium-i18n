@@ -1,8 +1,3 @@
-The translations are handled with i18next and are available on
-[transifex.com](https://www.transifex.com/whatever-sa/knowledgeplaza/kp4/). We
-use [gettext](https://www.gnu.org/software/gettext) to create & merge
-translations.
-
 ## How to install CLI
 
 In order to be able to push the POT (template file containing all the sentences
@@ -39,9 +34,9 @@ Transifex needs to be configured by project as well.
     [main]
     host = https://www.transifex.com
 
-    [knowledgeplaza.kp4]
-    file_filter = translations/<lang>/elium.po
-    source_file = translations/elium.pot
+    [$PROJECT$]
+    file_filter = translations/<lang>/$NAME$.po
+    source_file = translations/$NAME$.pot
     source_lang = en
     type = PO
 

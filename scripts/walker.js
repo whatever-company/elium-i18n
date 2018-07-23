@@ -96,7 +96,8 @@ module.exports = file => {
 			'exportDefaultFrom',
 			'exportNamespaceFrom',
 			'dynamicImport',
-			'objectRestSpread'
+			'objectRestSpread',
+			'asyncGenerators'
 		]
 	})
 

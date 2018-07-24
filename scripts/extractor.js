@@ -88,6 +88,7 @@ class Extractor {
 		console.log('Writing translations...')
 		// TODO: We have to sort the keys first.
 		const data = po.compile({
+			charset: 'utf-8',
 			headers: {
 				charset: 'utf-8',
 				'Project-Id-Version': 'Elium',

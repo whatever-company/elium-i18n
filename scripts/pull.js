@@ -4,7 +4,7 @@ function ensureArray (arr) {
 	return Array.isArray(arr) ? arr : [arr]
 }
 
-module.exports = async (languages, commit = true, source) => {
+module.exports = async (languages, source) => {
 	console.log('Pulling PO files...')
 	const langs = languages
 		? ensureArray(languages)
@@ -25,17 +25,5 @@ module.exports = async (languages, commit = true, source) => {
 		console.error(err)
 		console.warn('Be sure to have the transifex-client : pip install transifex-cli')
 		process.exit(1)
-	}
-
-	if (commit) {
-		console.log('Committing...')
-		try {
-			await exec('git add translations/*/*.po')
-			await exec(`git commit -m"chore(i18n): Update translations"`)
-			console.log('Done !')
-		} catch (err) {
-			console.error(err)
-			process.exit(1)
-		}
 	}
 }

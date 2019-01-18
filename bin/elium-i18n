@@ -6,6 +6,7 @@ const fs = require('fs')
 const pkg = require('../package.json')
 const Extractor = require('../scripts/extractor')
 const pull = require('../scripts/pull')
+const compile = require('../scripts/compile')
 const push = require('../scripts/push')
 
 const logError = err => {
@@ -39,7 +40,6 @@ program
 
 program
 	.command('pull')
-	.option('--no-commit', 'Do not commit PO files')
 	.option('-l, --language <language>', 'Language')
 	.option('--source <source>', 'Source Language')
 	.action(options => {
@@ -47,7 +47,14 @@ program
 			logError('No transifex configuration found in this directory. Please ensure you have a .tx/config file.')
 			process.exit(1)
 		}
-		return pull(options.language, options.commit, options.source)
+		return pull(options.language, options.source)
+	})
+program
+	.command('compile')
+	.option('-s, --source <path>', 'Source PO directory')
+	.option('-t, --target <path>', 'Target json directory')
+	.action(options => {
+		return compile(options.source, options.target)
 	})
 
 program.command('push').action(() => push())

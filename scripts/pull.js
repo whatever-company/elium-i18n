@@ -1,6 +1,6 @@
 const { exec } = require('./utils')
 
-function ensureArray (arr) {
+function ensureArray(arr) {
 	return Array.isArray(arr) ? arr : [arr]
 }
 
@@ -8,8 +8,8 @@ module.exports = async (languages, source) => {
 	console.log('Pulling PO files...')
 	const langs = languages
 		? ensureArray(languages)
-			.map(l => `-l ${l}`)
-			.join(' ')
+				.map(l => `-l ${l}`)
+				.join(' ')
 		: '-a '
 	try {
 		// We have to force the pull otherwise existing languages are skipped

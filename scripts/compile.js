@@ -9,7 +9,7 @@ const getDirectories = source =>
 		.map(name => join(source, name))
 		.filter(isDirectory)
 
-function compile (lang, poDir, jsonDir) {
+function compile(lang, poDir, jsonDir) {
 	gettextToI18next(lang, readFileSync(`${poDir}/${lang}/elium.po`)).then(
 		resources => writeFileSync(`${jsonDir}/${lang}.json`, resources),
 		err => console.error(err)

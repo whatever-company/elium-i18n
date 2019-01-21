@@ -24,13 +24,13 @@ const getMessageKey = message => {
 }
 
 class Extractor {
-	constructor (defaultDomain, language = 'en') {
+	constructor(defaultDomain, language = 'en') {
 		this.messages = {}
 		this.defaultDomain = defaultDomain
 		this.language = language
 	}
 
-	process (filesGlob) {
+	process(filesGlob) {
 		return new Promise((resolve, reject) => {
 			glob(filesGlob, (err, files) => {
 				if (err) reject(err)
@@ -42,11 +42,11 @@ class Extractor {
 		})
 	}
 
-	getMessage (value, context, domain) {
+	getMessage(value, context, domain) {
 		return this.messages[domain] ? this.messages[domain][getMessageKey({ value, context })] : null
 	}
 
-	setMessage ({ domain, value, plural, location, context }) {
+	setMessage({ domain, value, plural, location, context }) {
 		domain = domain || this.defaultDomain
 		if (!this.messages[domain]) {
 			this.messages[domain] = {}
@@ -75,7 +75,7 @@ class Extractor {
 		}
 	}
 
-	getData (domain, messages) {
+	getData(domain, messages) {
 		const translations = {}
 		console.log(`Processing POT for domain ${domain}`)
 		Object.values(messages).forEach(message => {
@@ -111,7 +111,7 @@ class Extractor {
 		return data
 	}
 
-	async toPOT (outputDir) {
+	async toPOT(outputDir) {
 		console.log(`Writing POT in ${outputDir}`)
 		Object.entries(this.messages).forEach(([domain, messages]) => {
 			const data = this.getData(domain, messages)

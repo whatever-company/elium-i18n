@@ -6,17 +6,17 @@ const traverse = require('babel-traverse').default
 const getArguments = node => {
 	return node.arguments.map(arg => {
 		switch (arg.type) {
-		case 'StringLiteral':
-			return arg.value
-		case 'ObjectExpression':
-			return arg.properties.reduce((acc, property) => {
-				if (property.key) {
-					acc[property.key.name] = property.value.value || null
-				}
-				return acc
-			}, {})
-		default:
-			return null
+			case 'StringLiteral':
+				return arg.value
+			case 'ObjectExpression':
+				return arg.properties.reduce((acc, property) => {
+					if (property.key) {
+						acc[property.key.name] = property.value.value || null
+					}
+					return acc
+				}, {})
+			default:
+				return null
 		}
 	})
 }
@@ -40,7 +40,7 @@ const getJSXMessage = (node, file) => {
 	return message
 }
 
-function * processCall (node, file) {
+function* processCall(node, file) {
 	const funcName = getCalleeName(node)
 	if (funcName !== 't') return
 
@@ -61,7 +61,7 @@ function * processCall (node, file) {
 	yield message
 }
 
-function * processJSX (node, file) {
+function* processJSX(node, file) {
 	const identifierName = node.openingElement.name.name
 	if (identifierName === 'Translate') {
 		const message = getJSXMessage(node, file)
@@ -103,10 +103,10 @@ module.exports = file => {
 
 	try {
 		traverse(ast, {
-			CallExpression (path) {
+			CallExpression(path) {
 				addMessages(processCall(path.node, file))
 			},
-			JSXElement (path) {
+			JSXElement(path) {
 				addMessages(processJSX(path.node, file))
 			}
 		})

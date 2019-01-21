@@ -1,7 +1,7 @@
 const fs = require('fs')
 const jsxToText = require('./jsxToText')
-const { parse } = require('babylon')
-const traverse = require('babel-traverse').default
+const { parse } = require('@babel/parser')
+const traverse = require('@babel/traverse').default
 
 const getArguments = node => {
 	return node.arguments.map(arg => {
@@ -90,8 +90,7 @@ module.exports = file => {
 		plugins: [
 			'jsx',
 			'flow',
-			'decorators',
-			'decorators2',
+			'decorators-legacy',
 			'classProperties',
 			'exportDefaultFrom',
 			'exportNamespaceFrom',

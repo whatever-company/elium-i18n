@@ -1,38 +1,52 @@
 {
   "name": "@eliumhq/elium-i18n",
+  "description": "",
+  "main": "index.js",
+  "author": "Elium",
+  "license": "UNLICENSED",
   "version": "2.0.0",
   "engines": {
     "node": ">=9",
     "npm": "^4.0.0"
   },
+  "scripts": {
+    "format": "prettier --write '**/*.{js,jsx,md,json,css}'",
+    "lint": "eslint scripts bin/elium-i18n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/elium/product/elium-i18n"
+  },
   "bin": {
     "elium-i18n": "bin/elium-i18n"
-	},
-	"files": [
-		"bin",
-		"scripts"
+  },
+  "files": [
+    "bin",
+    "scripts"
   ],
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "author": "Elium",
-  "license": "UNLICENSED",
   "dependencies": {
     "babel-traverse": "^6.26.0",
     "babylon": "^6.18.0",
-    "colors": "^1.3.1",
-    "commander": "^2.16.0",
-    "gettext-parser": "^2.0.0",
+    "colors": "^1.3.3",
+    "commander": "^2.19.0",
+    "gettext-parser": "^3.1.0",
     "htmlclean": "^3.0.8",
     "i18next-conv": "^8.0.1"
   },
   "devDependencies": {
-    "@eliumhq/eslint-config-elium": "^2.0.1",
-    "eslint": "^5.2.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "@eliumhq/eslint-config-elium": "^2.1.1",
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-graphql": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "graphql": "^14.1.1",
+    "prettier": "^1.16.0"
   }
 }

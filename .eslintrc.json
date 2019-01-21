@@ -1,33 +1,6 @@
 {
-  "extends": ["standard"],
-  "plugins": ["promise"],
-  "rules": {
-    "indent": ["error", "tab"],
-    "max-len": ["error", { "code": 120, "tabWidth": 2 }],
-    "quotes": [
-      "error",
-      "single",
-      { "allowTemplateLiterals": true, "avoidEscape": true }
-    ],
-    "semi": "off",
-    "object-curly-spacing": ["error", "always"],
-    "no-tabs": "off",
-    "no-mixed-spaces-and-tabs": "error",
-    "object-property-newline": 0,
-    "no-extra-semi": 0,
-    "no-mixed-operators": "off",
-    "no-useless-return": "off",
-    "prefer-promise-reject-errors": "warn",
-    "standard/no-callback-literal": "off",
-    "generator-star-spacing": 1,
-    "no-console": 0,
-    "no-unused-vars": [
-      1,
-      {
-        "args": "none",
-        "vars": "local",
-        "varsIgnorePattern": "^debug"
-      }
-    ]
-  }
+	"extends": "@eliumhq/elium",
+	"rules": {
+		"no-console": "off"
+	}
 }

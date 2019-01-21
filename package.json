@@ -7,7 +7,11 @@
   },
   "bin": {
     "elium-i18n": "bin/elium-i18n"
-  },
+	},
+	"files": [
+		"bin",
+		"scripts"
+  ],
   "description": "",
   "main": "index.js",
   "scripts": {},

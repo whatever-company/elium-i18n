@@ -55,6 +55,16 @@ class Extractor {
 		const existingTrans = this.getMessage(value, context, domain)
 		if (existingTrans) {
 			existingTrans.locations.push(location)
+			if (existingTrans.plural && plural && existingTrans.plural !== plural) {
+				throw new Error(
+					`Different plurals for "${value}" at ${JSON.stringify(existingTrans.locations)} and ${JSON.stringify(
+						location
+					)}`
+				)
+			}
+			if (!existingTrans.plural && plural) {
+				existingTrans.plural = plural
+			}
 		} else {
 			this.messages[domain][getMessageKey({ value, context })] = {
 				value,

@@ -97,14 +97,18 @@ class Extractor {
 		})
 		console.log('Writing translations...')
 		// TODO: We have to sort the keys first.
+		const now = new Date()
 		const data = po.compile({
 			charset: 'utf-8',
 			headers: {
-				charset: 'utf-8',
+				'Charset': 'utf-8',
 				'Project-Id-Version': 'Elium',
 				'Report-Msgid-Bugs-To': 'dev@elium.com',
-				'Content-Type': 'text/plain; charset=utf-8',
-				'Content-Transfer-Encoding': '8bit'
+				'Content-Type': 'text/plain; charset=UTF-8',
+				'Content-Transfer-Encoding': '8bit',
+				'Language': 'en',
+				'POT-Creation-Date': `${now.getUTCFullYear()}-${now.getUTCMonth()}-${now.getUTCDate()} ${now.getUTCHours()}:${now.getUTCMinutes()} Z`,
+				'MIME-Version': '1.0'
 			},
 			translations
 		})

@@ -1,6 +1,8 @@
 /*
 From https://github.com/i18next/i18next-scanner/blob/master/src/nodes-to-string.js
 
+Adatpted following https://github.com/i18next/react-i18next/blob/master/src/Trans.js
+
 The MIT License (MIT)
 
 Copyright (c) 2015-2017 Cheton Wu
@@ -39,7 +41,7 @@ const isNumericLiteral = node => {
 		return false
 	}
 
-	return node.type === 'Literal' && typeof node.value === 'number'
+	return node.type === 'NumericLiteral' && typeof node.value === 'number'
 }
 
 const isStringLiteral = node => {
@@ -47,7 +49,7 @@ const isStringLiteral = node => {
 		return false
 	}
 
-	return node.type === 'Literal' && typeof node.value === 'string'
+	return node.type === 'StringLiteral' && typeof node.value === 'string'
 }
 
 const isObjectExpression = node => {
@@ -72,6 +74,19 @@ const nodesToString = nodes => {
 				return
 			}
 			memo += value
+		} else if (node.children) {
+			/* Support with lists */
+			if (
+				node.type === 'JSXElement' &&
+				node.openingElement.attributes &&
+				node.openingElement.attributes.some(
+					attribute => attribute.name.type === 'JSXIdentifier' && attribute.name.name === 'i18nIsDynamicList'
+				)
+			) {
+				memo += `<${nodeIndex}></${nodeIndex}>`
+			} else {
+				memo += `<${nodeIndex}>${nodesToString(node.children)}</${nodeIndex}>`
+			}
 		} else if (node.type === 'JSXExpressionContainer') {
 			const { expression = {} } = node
 
@@ -81,8 +96,8 @@ const nodesToString = nodes => {
 			}
 			if (isStringLiteral(expression)) {
 				memo += expression.value
-			} else if (isObjectExpression(expression) && _get(expression, 'properties[0].type') === 'Property') {
-				memo += `<${nodeIndex}>{{${expression.properties[0].key.name}}}</${nodeIndex}>`
+			} else if (isObjectExpression(expression) && _get(expression, 'properties[0].type') === 'ObjectProperty') {
+				memo += `{{${expression.properties[0].key.name}}}`
 			} else {
 				console.error(
 					`Unsupported JSX expression. Only static values or {{interpolation}} blocks are supported. Got ${
@@ -91,8 +106,6 @@ const nodesToString = nodes => {
 				)
 				console.error(node.expression)
 			}
-		} else if (node.children) {
-			memo += `<${nodeIndex}>${nodesToString(node.children)}</${nodeIndex}>`
 		}
 
 		++nodeIndex

@@ -25,3 +25,4 @@ function walk(children) {
 }
 
 module.exports = node => walk([node])
+module.exports.walk = walk

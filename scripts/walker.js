@@ -40,6 +40,21 @@ const getJSXMessage = (node, file) => {
 	return message
 }
 
+const getTransMessage = (node, file) => {
+	const { attributes } = node.openingElement
+	const contextAttr = attributes.find(a => a.name.name === 'context')
+	const domainAttr = attributes.find(a => a.name.name === 'domain')
+
+	const message = {
+		value: jsxToText.walk(node.children),
+		context: contextAttr ? contextAttr.value.value : null,
+		location: { file, ...node.openingElement.loc.start },
+		domain: domainAttr ? domainAttr.value.value : null
+	}
+
+	return message
+}
+
 function* processCall(node, file) {
 	const funcName = getCalleeName(node)
 	if (funcName !== 't') return
@@ -72,6 +87,9 @@ function* processJSX(node, file) {
 		const plural = getJSXMessage(children[1], file)
 		singular.plural = plural.value
 		yield singular
+	} else if (identifierName === 'Trans') {
+		const message = getTransMessage(node, file)
+		yield message
 	}
 }
 

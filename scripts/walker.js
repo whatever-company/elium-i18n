@@ -1,5 +1,6 @@
 const fs = require('fs')
 const jsxToText = require('./jsxToText')
+const nodeToString = require('./nodes-to-string')
 const { parse } = require('@babel/parser')
 const traverse = require('@babel/traverse').default
 
@@ -46,7 +47,7 @@ const getTransMessage = (node, file) => {
 	const domainAttr = attributes.find(a => a.name.name === 'domain')
 
 	const message = {
-		value: jsxToText.walk(node.children),
+		value: nodeToString(node.children),
 		context: contextAttr ? contextAttr.value.value : null,
 		location: { file, ...node.openingElement.loc.start },
 		domain: domainAttr ? domainAttr.value.value : null

@@ -16,14 +16,14 @@ function compile(lang, poDir, jsonDir) {
 	)
 }
 
-module.exports = async (sourceDir, destinationDir) => {
+module.exports = async ({ source, target }) => {
 	console.log('Compiling PO to JSON')
-	const directories = getDirectories(sourceDir, destinationDir)
+	const directories = getDirectories(source, target)
 
 	directories.forEach(item => {
 		const locale = basename(item)
 		console.log(`Compiling ${locale}`)
-		compile(locale, sourceDir, destinationDir)
+		compile(locale, source, target)
 	})
 	console.log('Finished')
 }

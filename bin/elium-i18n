@@ -42,22 +42,24 @@ program
 	.command('pull')
 	.option('-l, --language <language>', 'Language')
 	.option('--source <source>', 'Source Language')
+	.options('-b, --branch [branch]', 'Branch')
 	.action(options => {
 		if (!fs.existsSync('.tx/config')) {
 			logError('No transifex configuration found in this directory. Please ensure you have a .tx/config file.')
 			process.exit(1)
 		}
-		return pull(options.language, options.source)
+		return pull(options)
 	})
 program
 	.command('compile')
 	.option('-s, --source <path>', 'Source PO directory')
 	.option('-t, --target <path>', 'Target json directory')
-	.action(options => {
-		return compile(options.source, options.target)
-	})
+	.action(options => compile(options))
 
-program.command('push').action(() => push())
+program
+	.command('push')
+	.option('-b, --branch [branch]', 'Branch')
+	.action(options => push(options))
 
 program.parse(process.argv)
 

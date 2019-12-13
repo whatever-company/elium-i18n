@@ -101,12 +101,12 @@ class Extractor {
 		const data = po.compile({
 			charset: 'utf-8',
 			headers: {
-				'Charset': 'utf-8',
+				Charset: 'utf-8',
 				'Project-Id-Version': 'Elium',
 				'Report-Msgid-Bugs-To': 'dev@elium.com',
 				'Content-Type': 'text/plain; charset=UTF-8',
 				'Content-Transfer-Encoding': '8bit',
-				'Language': 'en',
+				Language: 'en',
 				'POT-Creation-Date': `${now.getUTCFullYear()}-${now.getUTCMonth()}-${now.getUTCDate()} ${now.getUTCHours()}:${now.getUTCMinutes()} Z`,
 				'MIME-Version': '1.0'
 			},

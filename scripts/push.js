@@ -1,9 +1,9 @@
 const { exec } = require('./utils')
 
-module.exports = async () => {
+module.exports = async ({ branch }) => {
 	console.log('Pushing POT to Transifex...')
 	try {
-		await exec(`tx push -s`)
+		await exec(`tx push -s --parallel ${branch ? '-b ' + branch : ''}`)
 		console.log('Template pushed.')
 	} catch (err) {
 		console.warn(`

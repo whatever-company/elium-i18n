@@ -12,10 +12,10 @@ module.exports = async ({ languages, source, branch }) => {
 				.join(' ')
 		: '-a '
 
-	const branchParam = branch ? `-b ${branch}` : ''
+	const branchParam = branch ? `-b ${typeof branch !== 'boolean' ? branch : ''}` : ''
 	try {
 		// We have to force the pull otherwise existing languages are skipped
-		await exec(`tx pull ${langs} --parallel -f -{branchParam}`)
+		await exec(`tx pull ${langs} --parallel -f ${branchParam}`)
 
 		// Transifex does not download the translation file for the source language
 		if (source) {

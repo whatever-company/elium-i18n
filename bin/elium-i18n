@@ -42,7 +42,7 @@ program
 	.command('pull')
 	.option('-l, --language <language>', 'Language')
 	.option('--source <source>', 'Source Language')
-	.options('-b, --branch [branch]', 'Branch')
+	.option('-b, --branch [branch]', 'Branch')
 	.action(options => {
 		if (!fs.existsSync('.tx/config')) {
 			logError('No transifex configuration found in this directory. Please ensure you have a .tx/config file.')

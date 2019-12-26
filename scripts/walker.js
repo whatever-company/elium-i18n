@@ -115,7 +115,9 @@ module.exports = file => {
 			'exportNamespaceFrom',
 			'dynamicImport',
 			'objectRestSpread',
-			'asyncGenerators'
+			'asyncGenerators',
+			'optionalChaining',
+			'nullishCoalescingOperator'
 		]
 	})
 

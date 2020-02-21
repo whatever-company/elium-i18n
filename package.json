@@ -29,18 +29,18 @@
 		"scripts"
 	],
 	"dependencies": {
-		"@babel/parser": "^7.8.4",
-		"@babel/traverse": "^7.8.4",
-		"colors": "^1.4.0",
-		"commander": "^4.1.1",
-		"gettext-parser": "^4.0.2",
-		"htmlclean": "^3.0.8",
-		"i18next-conv": "^9.2.0",
-		"lodash": "^4.17.15"
+		"@babel/parser": "7.8.4",
+		"@babel/traverse": "7.8.4",
+		"colors": "1.4.0",
+		"commander": "4.1.1",
+		"gettext-parser": "4.0.2",
+		"htmlclean": "3.0.8",
+		"i18next-conv": "9.2.0",
+		"lodash": "4.17.15"
 	},
 	"devDependencies": {
 		"@whatever-company/eslint-config-elium": "^8.0.1",
-		"eslint": "^6.8.0",
+		"eslint": "6.8.0",
 		"eslint-config-prettier": "6.10.0",
 		"eslint-config-standard": "14.1.0",
 		"eslint-config-standard-react": "9.2.0",

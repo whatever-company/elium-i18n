@@ -1,7 +1,10 @@
 {
 	"extends": ["github>whatever-company/renovate-config"],
-	"packageRules": [{
-		"packagePatterns": ["^eslint"],
-		"groupName": "Eslint packages"
-	}]
+	"prConcurrentLimit": 3,
+	"packageRules": [
+		{
+			"packagePatterns": ["^eslint"],
+			"groupName": "Eslint packages"
+		}
+	]
 }

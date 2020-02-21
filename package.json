@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"author": "Elium",
 	"license": "UNLICENSED",
-	"version": "2.3.1",
+	"version": "3.0.0",
 	"engines": {
 		"node": ">=12",
 		"npm": "^4.0.0"
@@ -53,7 +53,7 @@
 		"eslint-plugin-react-hooks": "2.4.0",
 		"eslint-plugin-standard": "4.0.1",
 		"graphql": "14.6.0",
-    "prettier": "1.19.1",
-    "standard-version": "7.1.0"
+		"prettier": "1.19.1",
+		"standard-version": "7.1.0"
 	}
 }

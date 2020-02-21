@@ -1,5 +1,5 @@
 {
-	"extends": "@eliumhq/elium",
+	"extends": "@whatever-company/elium",
 	"rules": {
 		"no-console": "off"
 	}

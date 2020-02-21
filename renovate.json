@@ -1,0 +1,7 @@
+{
+	"extends": ["github>whatever-company/infra/renovate-config"],
+	"packageRules": [{
+		"packagePatterns": ["^eslint"],
+		"groupName": "Eslint packages"
+	}]
+}

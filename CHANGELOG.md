@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/whatever-company/elium-i18n/compare/v3.0.0...v3.0.1) (2020-03-17)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([52e68db](https://github.com/whatever-company/elium-i18n/commit/52e68db17a9fa404bb95e309d9e168e975521991))
+
 ## [3.0.0](https://github.com/whatever-company/elium-i18n/compare/v1.0.2...v3.0.0) (2020-02-21)
 
 

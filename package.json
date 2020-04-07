@@ -29,8 +29,8 @@
 		"scripts"
 	],
 	"dependencies": {
-		"@babel/parser": "7.8.8",
-		"@babel/traverse": "7.8.6",
+		"@babel/parser": "7.9.4",
+		"@babel/traverse": "7.9.5",
 		"colors": "1.4.0",
 		"commander": "5.0.0",
 		"gettext-parser": "4.0.3",

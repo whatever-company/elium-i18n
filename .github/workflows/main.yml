@@ -25,7 +25,8 @@ jobs:
       - run: yarn install --frozen-lockfile
         env:
           NODE_AUTH_TOKEN: ${{ steps.github_app.outputs.token }}
-      
+
+      - run: yarn lint
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

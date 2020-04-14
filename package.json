@@ -35,7 +35,7 @@
 		"commander": "5.0.0",
 		"gettext-parser": "4.0.3",
 		"htmlclean": "3.0.8",
-		"i18next-conv": "9.2.0",
+		"i18next-conv": "9.2.1",
 		"lodash": "4.17.15"
 	},
 	"devDependencies": {

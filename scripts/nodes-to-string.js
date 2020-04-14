@@ -100,9 +100,7 @@ const nodesToString = nodes => {
 				memo += `{{${expression.properties[0].key.name}}}`
 			} else {
 				console.error(
-					`Unsupported JSX expression. Only static values or {{interpolation}} blocks are supported. Got ${
-						expression.type
-					}:`
+					`Unsupported JSX expression. Only static values or {{interpolation}} blocks are supported. Got ${expression.type}:`
 				)
 				console.error(node.expression)
 			}

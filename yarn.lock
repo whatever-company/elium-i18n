@@ -1292,10 +1292,10 @@ htmlclean@3.0.8:
   resolved "https://registry.yarnpkg.com/htmlclean/-/htmlclean-3.0.8.tgz#cea451cf5399d4018386a57129489f2d630e62b0"
   integrity sha1-zqRRz1OZ1AGDhqVxKUifLWMOYrA=
 
-i18next-conv@9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-9.2.0.tgz#4aa9e238d2c955a935e4e7b75121827e734a985a"
-  integrity sha512-36Y8hU0yzPQ365y2g5Sb/uz735ZxdYLE0g1X56T1F4SSBHXtoSPRrF+2/qYgYB/5TkwX/vOXj1a0TDm16a1OTA==
+i18next-conv@9.2.1:
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-9.2.1.tgz#1f876a31b88a12d1fd830485a6926b8a1c88feb5"
+  integrity sha512-RAlQIIf5BFfEywqd/1R9W4S3bGL+6qMKD/HKfnSisw9K5tSx4chQKf6pbBNzMyaoTBqWy+ZHS27ZmxE5GIGgag==
   dependencies:
     bluebird "^3.5.3"
     chalk "^2.4.2"

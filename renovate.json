@@ -1,6 +1,7 @@
 {
 	"extends": ["github>whatever-company/renovate-config"],
 	"prConcurrentLimit": 3,
+	"automerge": true,
 	"packageRules": [
 		{
 			"packagePatterns": ["^eslint"],

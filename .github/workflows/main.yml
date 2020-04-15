@@ -13,19 +13,9 @@ jobs:
         with:
           node-version: '13.x'
           registry-url: 'https://npm.pkg.github.com'
-
-      - name: Get Github App token
-        id: github_app
-        uses: whatever-company/github-app-token-action@master
-        with:
-          app_id: 60361
-          private_key: ${{ secrets.ELIUM_BOT_PRIVATE_KEY }}
-          repository: ${{ github.repository }}
-
       - run: yarn install --frozen-lockfile
         env:
-          NODE_AUTH_TOKEN: ${{ steps.github_app.outputs.token }}
-
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
       - run: yarn lint
       - run: npm publish
         env:

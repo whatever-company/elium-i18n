@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/whatever-company/elium-i18n/compare/v3.0.2...v4.0.0) (2021-01-22)
+
 ### [3.0.2](https://github.com/whatever-company/elium-i18n/compare/v3.0.1...v3.0.2) (2020-04-14)
 
 

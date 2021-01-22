@@ -107,7 +107,7 @@ class Extractor {
 				'Content-Type': 'text/plain; charset=UTF-8',
 				'Content-Transfer-Encoding': '8bit',
 				Language: 'en',
-				'POT-Creation-Date': `${now.getUTCFullYear()}-${now.getUTCMonth()}-${now.getUTCDate()} ${now.getUTCHours()}:${now.getUTCMinutes()} Z`,
+				'POT-Creation-Date': `${now.getUTCFullYear()}-${now.getUTCMonth().padStart(2, '0')}-${now.getUTCDate().padStart(2, '0')} ${now.getUTCHours().padStart(2, '0')}:${now.getUTCMinutes().padStart(2, '0')} Z`,
 				'MIME-Version': '1.0'
 			},
 			translations

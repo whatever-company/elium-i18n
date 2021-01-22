@@ -16,19 +16,10 @@ const logError = err => {
 program.version(pkg.version)
 
 program
-	.command('extract [files] [outputDir]')
+	.command('extract <files> <outputDir>')
 	.option('-d, --domain <domain>', 'Default domain', 'elium')
 	.option('-l, --lang <lang>', 'Default language', 'en')
 	.action(async (files, outputDir, options) => {
-		if (!files) {
-			logError('Missing files glob')
-			process.exit(1)
-		}
-		if (!outputDir) {
-			logError('Missing output directory')
-			process.exit(1)
-		}
-
 		const extractor = new Extractor(options.domain, options.language)
 		await extractor.process(files)
 		extractor.toPOT(outputDir)

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/whatever-company/elium-i18n/compare/v4.0.0...v4.0.1) (2021-02-15)
+
+
+### Bug Fixes
+
+* turn date components into strings before calling padStart ([65db0b1](https://github.com/whatever-company/elium-i18n/commit/65db0b156d3279e94a09b4f2c491f2198645465e))
+
 ## [4.0.0](https://github.com/whatever-company/elium-i18n/compare/v3.0.2...v4.0.0) (2021-01-22)
 
 ### [3.0.2](https://github.com/whatever-company/elium-i18n/compare/v3.0.1...v3.0.2) (2020-04-14)

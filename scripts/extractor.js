@@ -98,6 +98,13 @@ class Extractor {
 		console.log('Writing translations...')
 		// TODO: We have to sort the keys first.
 		const now = new Date()
+		const creationDate = `${now.getUTCFullYear()}-${now
+			.getUTCMonth()
+			.toString()
+			.padStart(2, '0')}-${now.getUTCDate().toString().ppadStart(2, '0')} ${now
+			.getUTCHours()
+			.toString()
+			.padStart(2, '0')}:${now.getUTCMinutes().toString().padStart(2, '0')}Z`
 		const data = po.compile({
 			charset: 'utf-8',
 			headers: {
@@ -107,7 +114,7 @@ class Extractor {
 				'Content-Type': 'text/plain; charset=UTF-8',
 				'Content-Transfer-Encoding': '8bit',
 				Language: 'en',
-				'POT-Creation-Date': `${now.getUTCFullYear()}-${now.getUTCMonth().toString().padStart(2, '0')}-${now.getUTCDate().toString().padStart(2, '0')} ${now.getUTCHours().toString().padStart(2, '0')}:${now.getUTCMinutes().toString().padStart(2, '0')} Z`,
+				'POT-Creation-Date': creationDate,
 				'MIME-Version': '1.0'
 			},
 			translations

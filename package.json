@@ -6,8 +6,8 @@
 	"license": "UNLICENSED",
 	"version": "4.0.1",
 	"engines": {
-		"node": ">=12",
-		"npm": "^6.0.0"
+		"node": ">=15",
+		"npm": "^7.2.0"
 	},
 	"scripts": {
 		"format": "prettier --write '**/*.{js,jsx,md,json,css}'",

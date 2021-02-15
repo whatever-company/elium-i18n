@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-        name: Use Node.js 13.x
+        name: Use Node.js 15.x
         with:
-          node-version: '13.x'
+          node-version: '15.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: yarn install --frozen-lockfile
         env:

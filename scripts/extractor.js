@@ -107,7 +107,13 @@ class Extractor {
 				'Content-Type': 'text/plain; charset=UTF-8',
 				'Content-Transfer-Encoding': '8bit',
 				Language: 'en',
-				'POT-Creation-Date': `${now.getUTCFullYear()}-${now.getUTCMonth().toString().padStart(2, '0')}-${now.getUTCDate().toString().padStart(2, '0')} ${now.getUTCHours().toString().padStart(2, '0')}:${now.getUTCMinutes().toString().padStart(2, '0')} Z`,
+				'POT-Creation-Date': `${now.getUTCFullYear()}-${now
+					.getUTCMonth()
+					.toString()
+					.padStart(2, '0')}-${now.getUTCDate().toString().padStart(2, '0')} ${now
+					.getUTCHours()
+					.toString()
+					.padStart(2, '0')}:${now.getUTCMinutes().toString().padStart(2, '0')} Z`,
 				'MIME-Version': '1.0'
 			},
 			translations

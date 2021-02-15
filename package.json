@@ -30,7 +30,6 @@
 	"dependencies": {
 		"@babel/parser": "7.12.11",
 		"@babel/traverse": "7.12.12",
-		"colors": "1.4.0",
 		"commander": "5.0.0",
 		"gettext-parser": "4.0.4",
 		"htmlclean": "3.0.8",

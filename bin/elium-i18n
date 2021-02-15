@@ -1,15 +1,9 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-const colors = require('colors')
-const fs = require('fs')
 const pkg = require('../package.json')
 const Extractor = require('../scripts/extractor')
 const compile = require('../scripts/compile')
-
-const logError = err => {
-	console.error(colors.red(err))
-}
 
 program.version(pkg.version)
 

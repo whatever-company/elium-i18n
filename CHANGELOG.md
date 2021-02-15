@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/whatever-company/elium-i18n/compare/v5.0.3...v5.1.0) (2021-02-15)
+
+
+### Features
+
+* **compile:** optional source filename for compile command. Use --source-filename option (defaults to 'elium.po' for backward compatibility) ([7acd74e](https://github.com/whatever-company/elium-i18n/commit/7acd74e764434c7343a4eff5dde171f4188b09f4))
+
 ### [5.0.3](https://github.com/whatever-company/elium-i18n/compare/v5.0.2...v5.0.3) (2021-02-15)
 
 

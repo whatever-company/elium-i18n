@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"author": "Elium",
 	"license": "UNLICENSED",
-	"version": "4.0.2",
+	"version": "4.0.3",
 	"engines": {
 		"node": ">=12",
 		"npm": "^6.0.0"

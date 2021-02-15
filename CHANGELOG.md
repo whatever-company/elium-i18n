@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.3](https://github.com/whatever-company/elium-i18n/compare/v4.0.2...v4.0.3) (2021-02-15)
+
+
+### Bug Fixes
+
+* **Publish:** Add missing scope ([205e018](https://github.com/whatever-company/elium-i18n/commit/205e018829199016e1d3c86f15e8334e0cc26160))
+
 ### [4.0.2](https://github.com/whatever-company/elium-i18n/compare/v4.0.0...v4.0.2) (2021-02-15)
 
 

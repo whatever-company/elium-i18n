@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/whatever-company/elium-i18n/compare/v4.0.0...v5.0.0) (2021-02-15)
+
+
+### Features
+
+* **Upgrade:** Upgrade node, npm. Remove pull & push commands ([92e84f5](https://github.com/whatever-company/elium-i18n/commit/92e84f5516963b5c6ea49dddc9fb3dfd1ca99ba9))
+
+
+### Bug Fixes
+
+* turn date components into strings before calling padStart ([65db0b1](https://github.com/whatever-company/elium-i18n/commit/65db0b156d3279e94a09b4f2c491f2198645465e))
+
 ### [4.0.1](https://github.com/whatever-company/elium-i18n/compare/v4.0.0...v4.0.1) (2021-02-15)
 
 

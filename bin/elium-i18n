@@ -24,6 +24,7 @@ program
 program
 	.command('compile')
 	.option('-s, --source <path>', 'Source PO directory')
+	.option('-sf, --source-filename <path>', 'Source PO filename', 'elium.po')
 	.option('-t, --target <path>', 'Target json directory')
 	.action(options => compile(options))
 

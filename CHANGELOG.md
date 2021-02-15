@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.3](https://github.com/whatever-company/elium-i18n/compare/v5.0.2...v5.0.3) (2021-02-15)
+
+
+### Bug Fixes
+
+* **extract:** wrong function name ([7605b9b](https://github.com/whatever-company/elium-i18n/commit/7605b9bd1fda5101e863d83bedfd044ae3697a43))
+
 ### [5.0.2](https://github.com/whatever-company/elium-i18n/compare/v5.0.1...v5.0.2) (2021-02-15)
 
 

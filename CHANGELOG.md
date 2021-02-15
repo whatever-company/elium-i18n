@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/whatever-company/elium-i18n/compare/v5.0.0...v5.0.1) (2021-02-15)
+
+
+### Bug Fixes
+
+* **CI:** Remove unused deps + fix lint ([36058a7](https://github.com/whatever-company/elium-i18n/commit/36058a7b503a6c496e11a2b31baa1bcb80a26d1a))
+
 ## [5.0.0](https://github.com/whatever-company/elium-i18n/compare/v4.0.0...v5.0.0) (2021-02-15)
 
 

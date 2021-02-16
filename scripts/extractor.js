@@ -86,6 +86,7 @@ class Extractor {
 			translations[context][message.value] = {
 				msgctxt: context,
 				msgid: message.value,
+				msgstr: [message.value, message.plural].filter(Boolean),
 				comments: {
 					// TODO: Get translator comment
 					reference: message.locations.map(l => `${l.file}:${l.line}`).join(' ')

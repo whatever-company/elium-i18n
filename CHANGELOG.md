@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/whatever-company/elium-i18n/compare/v5.1.0...v5.2.0) (2021-02-16)
+
+
+### Features
+
+* **POT:** Add the key as the value as well ([8d03bff](https://github.com/whatever-company/elium-i18n/commit/8d03bff85f5728b3b0eac656ea0b01154b47bc2e))
+
 ## [5.1.0](https://github.com/whatever-company/elium-i18n/compare/v5.0.3...v5.1.0) (2021-02-15)
 
 

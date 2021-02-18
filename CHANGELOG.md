@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.1](https://github.com/whatever-company/elium-i18n/compare/v5.2.0...v5.2.1) (2021-02-18)
+
+
+### Bug Fixes
+
+* **extract:** Ensure the directory exists before writing the pot ([cf8d0b1](https://github.com/whatever-company/elium-i18n/commit/cf8d0b13581a148cd572a427455f135b48dc8a5b))
+
 ## [5.2.0](https://github.com/whatever-company/elium-i18n/compare/v5.1.0...v5.2.0) (2021-02-16)
 
 

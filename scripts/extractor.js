@@ -127,6 +127,7 @@ class Extractor {
 		console.log(`Writing POT in ${outputDir}`)
 		Object.entries(this.messages).forEach(([domain, messages]) => {
 			const data = this.getData(domain, messages)
+			fs.mkdirSync(outputDir, { recursive: true })
 			fs.writeFileSync(resolve(outputDir, domain) + '.pot', data, 'utf-8')
 		})
 	}

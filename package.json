@@ -34,7 +34,7 @@
 		"gettext-parser": "4.0.4",
 		"htmlclean": "3.0.8",
 		"i18next-conv": "10.1.0",
-		"lodash": "4.17.20"
+		"lodash": "4.17.21"
 	},
 	"devDependencies": {
 		"@whatever-company/eslint-config-elium": "^9.0.0",

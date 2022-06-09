@@ -108,7 +108,7 @@ module.exports = file => {
 		sourceType: 'module',
 		plugins: [
 			'jsx',
-			'flow',
+			'typescript',
 			'decorators-legacy',
 			'classProperties',
 			'exportDefaultFrom',

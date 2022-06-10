@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.2](https://github.com/whatever-company/elium-i18n/compare/v5.2.1...v5.2.2) (2022-06-10)
+
+### Features
+
+* **extract:** Add Typescript plugin to babel parser ([7acd74e](https://github.com/whatever-company/elium-i18n/commit/fd329610a7df66c7ebb0d9bcadfff6b36d363a92))
+
 ### [5.2.1](https://github.com/whatever-company/elium-i18n/compare/v5.2.0...v5.2.1) (2021-02-18)
 
 

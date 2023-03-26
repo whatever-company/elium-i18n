@@ -50,7 +50,7 @@
 		"eslint-plugin-react": "7.22.0",
 		"eslint-plugin-react-hooks": "4.2.0",
 		"eslint-plugin-standard": "5.0.0",
-		"graphql": "15.4.0",
+		"graphql": "15.8.0",
 		"prettier": "2.2.1",
 		"standard-version": "9.1.0"
 	}

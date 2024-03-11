@@ -12,7 +12,7 @@
 	"scripts": {
 		"format": "prettier --write '**/*.{js,jsx,md,json,css}'",
 		"lint": "eslint scripts bin/elium-i18n",
-		"test": "elium-i18n extract './tests/**/*.+(js|jsx)' ./tests/translations -d elium-i18n -l en",
+		"test": "bin/elium-i18n extract './tests/**/*.+(js|jsx)' ./tests/translations -d elium-i18n -l en",
 		"release": "standard-version"
 	},
 	"repository": {

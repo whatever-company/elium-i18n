@@ -1,5 +1,5 @@
 {
-	"extends": "@whatever-company/elium",
+	"extends": ["standard", "prettier"],
 	"rules": {
 		"no-console": "off"
 	}

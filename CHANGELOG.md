@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.4](https://github.com/whatever-company/elium-i18n/compare/v5.2.3...v5.2.4) (2024-03-15)
+
+
+### Bug Fixes
+
+* upgrade node for main ([8b2a784](https://github.com/whatever-company/elium-i18n/commit/8b2a7845b2fab2ae92fbe07f261900c0652f00f1))
+
 ### [5.2.3](https://github.com/whatever-company/elium-i18n/compare/v5.2.2...v5.2.3) (2024-03-15)
 
 

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.3](https://github.com/whatever-company/elium-i18n/compare/v5.2.2...v5.2.3) (2024-03-15)
+
+
+### Bug Fixes
+
+* dependabot correct registry ([0f58b4d](https://github.com/whatever-company/elium-i18n/commit/0f58b4d93c48fa79feaa35d9d5d697de7b3989e6))
+* move dependabot file ([d2d4e2d](https://github.com/whatever-company/elium-i18n/commit/d2d4e2dc8aceffe265cb386d1d74cb6e12ab68b0))
+* registries ([8167ca8](https://github.com/whatever-company/elium-i18n/commit/8167ca8e0b221b59095a61fffb0077622adc5e07))
+
 ### [5.2.2](https://github.com/whatever-company/elium-i18n/compare/v5.2.1...v5.2.2) (2022-06-10)
 
 ### Features

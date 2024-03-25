@@ -28,7 +28,7 @@
 		"scripts"
 	],
 	"dependencies": {
-		"@babel/parser": "7.24.0",
+		"@babel/parser": "7.24.1",
 		"@babel/traverse": "7.24.0",
 		"commander": "12.0.0",
 		"gettext-parser": "7.0.1",

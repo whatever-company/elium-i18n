@@ -1,5 +1,5 @@
 const fs = require('node:fs')
-const {glob} = require('node:fs/promises')
+const { glob } = require('node:fs/promises')
 const { po } = require('gettext-parser')
 const { resolve } = require('node:path')
 const walk = require('./walker')

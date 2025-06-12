@@ -26,8 +26,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-const _get = require('lodash/get')
-
 const isJSXText = node => {
 	if (!node) {
 		return false
@@ -96,7 +94,7 @@ const nodesToString = nodes => {
 			}
 			if (isStringLiteral(expression)) {
 				memo += expression.value
-			} else if (isObjectExpression(expression) && _get(expression, 'properties[0].type') === 'ObjectProperty') {
+			} else if (isObjectExpression(expression) && expression?.properties?.[0]?.type === 'ObjectProperty') {
 				memo += `{{${expression.properties[0].key.name}}}`
 			} else {
 				console.error(

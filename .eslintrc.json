@@ -1,6 +1,0 @@
-{
-	"extends": ["standard", "prettier"],
-	"rules": {
-		"no-console": "off"
-	}
-}

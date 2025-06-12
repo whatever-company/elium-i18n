@@ -1,7 +1,7 @@
-const fs = require('fs')
+const fs = require('node:fs')
 const glob = require('glob')
 const { po } = require('gettext-parser')
-const { resolve } = require('path')
+const { resolve } = require('node:path')
 const walk = require('./walker')
 
 /*
@@ -128,7 +128,7 @@ class Extractor {
 		Object.entries(this.messages).forEach(([domain, messages]) => {
 			const data = this.getData(domain, messages)
 			fs.mkdirSync(outputDir, { recursive: true })
-			fs.writeFileSync(resolve(outputDir, domain) + '.pot', data, 'utf-8')
+			fs.writeFileSync(`${resolve(outputDir, domain)}.pot`, data, 'utf-8')
 		})
 	}
 }

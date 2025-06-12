@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('node:fs')
 const jsxToText = require('./jsxToText')
 const nodeToString = require('./nodes-to-string')
 const { parse } = require('@babel/parser')

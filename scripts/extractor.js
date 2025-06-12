@@ -1,5 +1,5 @@
 const fs = require('node:fs')
-const glob = require('glob')
+const {glob} = require('node:fs/promises')
 const { po } = require('gettext-parser')
 const { resolve } = require('node:path')
 const walk = require('./walker')
@@ -30,16 +30,10 @@ class Extractor {
 		this.language = language
 	}
 
-	process(filesGlob) {
-		return new Promise((resolve, reject) => {
-			glob(filesGlob, (err, files) => {
-				if (err) reject(err)
-				for (const file of files) {
-					walk(file).forEach(message => this.setMessage(message))
-				}
-				resolve()
-			})
-		})
+	async process(filesGlob) {
+		for await (const entry of glob(filesGlob)) {
+			walk(entry).forEach(message => this.setMessage(message))
+		}
 	}
 
 	getMessage(value, context, domain) {

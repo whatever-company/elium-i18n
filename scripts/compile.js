@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('node:path')
 const { join, basename } = path
-const { readFileSync, writeFileSync, lstatSync, readdirSync } = require('fs')
+const { readFileSync, writeFileSync, lstatSync, readdirSync } = require('node:fs')
 const { gettextToI18next } = require('i18next-conv')
 
 const isDirectory = source => lstatSync(source).isDirectory()
